@@ -21,6 +21,11 @@ function download() {
   }, 200);
 
   saveHistory(url, type);
+  function saveHistory(url, type) {
+  let history = JSON.parse(localStorage.getItem("history")) || [];
+  history.unshift({ url, type, time: new Date().toLocaleString() });
+  localStorage.setItem("history", JSON.stringify(history));
+}
 
   const api = `https://downloader-api.onrender.com/${type}?url=${encodeURIComponent(url)}`;
   window.open(api, "_blank");
