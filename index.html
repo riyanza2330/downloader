@@ -2,24 +2,29 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>All Video Downloader</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Snap Downloader</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="card">
-  <h1>All Video Downloader</h1>
-  <p>TikTok • YouTube • MP3</p>
+<div class="wrapper">
+  <h1>Snap Downloader</h1>
+  <p>Download TikTok & YouTube tanpa watermark</p>
 
+  <input id="url" placeholder="Paste link video di sini">
+  
   <select id="type">
     <option value="tiktok">TikTok</option>
     <option value="youtube">YouTube Video</option>
     <option value="mp3">YouTube MP3</option>
   </select>
 
-  <input type="text" id="url" placeholder="Paste link di sini">
-  <button onclick="download()">DOWNLOAD</button>
+  <button onclick="download()">Download</button>
+
+  <div id="progress" class="progress hidden">
+    <div class="bar"></div>
+  </div>
 
   <p id="status"></p>
 </div>
