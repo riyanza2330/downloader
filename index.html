@@ -2,25 +2,26 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>All Video Downloader</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="container">
+<div class="card">
   <h1>All Video Downloader</h1>
+  <p>TikTok • YouTube • MP3</p>
 
-  <select id="platform">
+  <select id="type">
     <option value="tiktok">TikTok</option>
-    <option value="youtube">YouTube</option>
-    <option value="mp3">Convert to MP3</option>
+    <option value="youtube">YouTube Video</option>
+    <option value="mp3">YouTube MP3</option>
   </select>
 
-  <input type="text" id="url" placeholder="Tempel link video di sini">
-  <button onclick="download()">Download</button>
+  <input type="text" id="url" placeholder="Paste link di sini">
+  <button onclick="download()">DOWNLOAD</button>
 
-  <p id="result"></p>
+  <p id="status"></p>
 </div>
 
 <script src="script.js"></script>
