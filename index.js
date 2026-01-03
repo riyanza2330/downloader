@@ -7,7 +7,10 @@ app.use(cors());
 
 app.get("/tiktok", async (req, res) => {
   const url = req.query.url;
-  res.redirect(`https://tikcdn.app/download?url=${url}`);
+  if (!url) return res.send("URL kosong");
+
+  // API no watermark
+  res.redirect(https://tikwm.com/video/media/hdplay/${encodeURIComponent(url)});
 });
 
 app.get("/youtube", async (req, res) => {
