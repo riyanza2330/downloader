@@ -10,6 +10,4 @@ function download() {
 
   status.innerText = "⏳ Processing...";
 
-  const api = `https://YOUR-BACKEND.onrender.com/${type}?url=${encodeURIComponent(url)}`;
-  window.open(api, "_blank");
-}
+  const api = `https://downloader-api.onrender.com/${type}?url=${encodeURIComponent(url)}`;
