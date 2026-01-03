@@ -1,0 +1,30 @@
+body {
+  background: #0f172a;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+.container {
+  max-width: 400px;
+  margin: 60px auto;
+  padding: 20px;
+  background: #020617;
+  border-radius: 12px;
+}
+
+h1 {
+  text-align: center;
+}
+
+input, select, button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: none;
+}
+
+button {
+  background: #22c55e;
+  font-weight: bold;
+}
