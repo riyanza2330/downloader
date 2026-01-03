@@ -1,3 +1,12 @@
+let limit = localStorage.getItem("limit") || 0;
+
+if (limit >= 5) {
+  alert("Limit gratis habis 🚫\nUpgrade ke PRO untuk unlimited download!");
+  return;
+}
+
+localStorage.setItem("limit", Number(limit) + 1);
+
 function download() {
   const url = document.getElementById("url").value;
   const type = document.getElementById("type").value;
