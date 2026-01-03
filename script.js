@@ -1,26 +1,15 @@
 function download() {
   const url = document.getElementById("url").value;
-  const platform = document.getElementById("platform").value;
-  const result = document.getElementById("result");
+  const type = document.getElementById("type").value;
+  const status = document.getElementById("status");
 
   if (!url) {
-    result.innerText = "Masukkan link dulu bro!";
+    status.innerText = "❌ Link kosong bro";
     return;
   }
 
-  result.innerHTML = "⏳ Memproses...";
+  status.innerText = "⏳ Processing...";
 
-  let api = "";
-
-  if (platform === "tiktok") {
-    api = `https://api.example.com/tiktok?url=${url}`;
-  } 
-  else if (platform === "youtube") {
-    api = `https://api.example.com/youtube?url=${url}`;
-  }
-  else {
-    api = `https://api.example.com/mp3?url=${url}`;
-  }
-
+  const api = `https://YOUR-BACKEND.onrender.com/${type}?url=${encodeURIComponent(url)}`;
   window.open(api, "_blank");
 }
